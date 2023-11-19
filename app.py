@@ -84,6 +84,7 @@ def sign_in():
             "exp": datetime.utcnow() + timedelta(seconds=60 * 60 * 24),
         }
         token = jwt.encode(payload, SECRET_KEY, algorithm="HS256")
+        
 
         return jsonify(
             {
